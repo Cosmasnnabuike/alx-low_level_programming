@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: Always 0 (success)
  */
 
 int main(void)
@@ -20,8 +20,8 @@ int main(void)
 		}
 	while
 		(d <= 'Z') {
-			putchar(c);
-			c++;
+			putchar(d);
+			d++;
 		}
 	putchar('\n');
 	return (0);
