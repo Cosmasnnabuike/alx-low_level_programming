@@ -1,31 +1,41 @@
 #include <stdio.h>
 /**
- * main - print 4 digits separated by space and comma
+ * main - Entry point
  *
- * Return: (0)
+ * Description: Write a program that prints all possible
+ * different combinations of two digits
  *
+ * Return: 0 (success)
  */
+
 int main(void)
 {
-	int i, j;
-	int a, b, c, d;
+	int firstDigit = 0, seconDigit;
 
-	for (i = 0; i < 100; i++)
-	{
-		a = i / 10;
-		b = i % 10;
-
-		for (j = 0; j < 100; j++)
+		while (firstDigit <= 99)
 		{
-			c = j / 10;
-			b = j % 10;
-
-			if (a < c || (a == c && b < d))
+			seconDigit = firstDigit;
+			while (seconDigit <= 99)
 			{
-				putchar(a + '0');
-				putchar(b + '0');
-				putchar(32);
-				putchar(c + '0');
-				putchar(d + '0');
+				if (seconDigit != firstDigit)
+				{
+					putchar((firstDigit / 10) + 48);
+					putchar((firstDigit % 10) + 48);
+					putchar(' ');
+					putchar((seconDigit / 10) + 48);
+					putchar((seconDigit % 10) + 48);
 
-				if (!(a == 9 && b == 8))
+					if (firstDigit != 98 || seconDigit != 99)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+				seconDigit++;
+			}
+			firstDigit++;
+		}
+		putchar('\n');
+
+		return (0);
+}
