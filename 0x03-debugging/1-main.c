@@ -2,7 +2,7 @@
 
 /**
  * main - causes an infinite loop
- * Returun: 0
+ * Returun: 0 (success)
  */
 
 int main(void)
@@ -19,6 +19,5 @@ int main(void)
 	/*)*/
 
 	printf("Infinite loop avoided! \\o/\n");
-
 	return (0);
 }
