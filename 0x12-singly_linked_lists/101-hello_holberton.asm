@@ -1,7 +1,7 @@
 global    main
           extern    printf
 main:
-	  move   edit, format
+	  mov   edi, format
 	  xor   eax, eax
 	  call  printf
 	  mov 	eax, 0
